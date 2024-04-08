@@ -169,3 +169,19 @@ let mana1 = new WindowManager()
 
 
  console.log(mana1.allIndicatorsInRange(15,50))
+
+
+ let getValue = (spec,name) => {
+    if(typeof(spec[name]) == "function"){
+      return spec[name]()
+    }else{
+      return spec[name]
+    }
+ }
+
+
+ let spec1 = new WindowSpec(10,20)
+
+//console.log(typeof(WindowSpec.height))
+
+ console.log(getValue(spec1,"area"))
